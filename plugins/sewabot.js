@@ -13,37 +13,14 @@ let handler = async (m, { conn }) => {
   description: ` *• SEWA BOT & UP TO PREMIUM •*
         
 1. Grup / 30 Hari
-Rp. 15.000 Dana
-Rp. 15.000 Pulsa
-
-2. Premium / 30 Hari
-Rp. 10.000 Dana
-Rp. 10.000 Pulsa
-
-3. Premium + Grup / 30 Hari
-Rp. 20.000 Dana
-Rp. 20.000 Pulsa
+Rp. 15.000 Gopay
+Rp. 15.000 Pulsa (Axis/Telkom)
 
 wa.me/${owner[0]}
 *Bukan Bot!!!*
 *Owner ${conn.user.name}*
 `,
-  buttonText: 'Harga Sesuai Pasaran',
-  listType: 2,
-  productListInfo: {
-  productSections: [{
-  title:'Klik untuk order',
-  products:[{productId:'7487741964584083'}]}],
-  headerImage: { productId: '7487741964584083',
-  jpegThumbnail: baper },
-  businessOwnerJid: `6289654360447@s.whatsapp.net`
-  },
-  footerText: 'https://aiinne.github.io',
-  }},{})
-  conn.relayMessage(prepare.key.remoteJid,prepare.message,{messageId:prepare.key.id})
-  const data = global.owner.filter(([id, isCreator]) => id && isCreator)
-  conn.sendContact(m.chat, data.map(([id, name]) => [id, name]), m)
-
+    
 }
 handler.help = ['sewa']
 handler.tags = ['main']
